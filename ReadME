@@ -1,0 +1,58 @@
+Cypress Functional Login Test
+This repository contains functional tests for the login functionality of a web application using Cypress. The tests cover various scenarios, including valid and invalid login attempts, checking for user lockouts, and verifying the responsiveness of the application's layout across different devices and screen sizes.
+
+Getting Started
+Prerequisites
+Node.js and npm should be installed on your machine.
+Installation
+Clone this repository:
+
+bash
+Copy code
+git clone <repository-url>
+cd <repository-folder>
+Install dependencies:
+
+bash
+Copy code
+npm install
+Running the Tests
+bash
+Copy code
+npm run cy:open
+This command will open the Cypress Test Runner, allowing you to select and run individual test cases or run all tests.
+
+Test Scenarios
+1. Login Scenarios
+Login without username and password
+Login with username but without password
+Login without username but with password
+Valid login with correct username and password
+Login attempt with a locked-out user
+Login attempt with a user experiencing issues
+Login attempt with a user facing performance glitches
+2. Session Management
+Verify that the session remains active after login and navigation
+3. Browser Compatibility
+Ensure functionality across different browsers (Chrome, Firefox, Edge)
+4. Responsive Layout
+Test layout responsiveness across various devices and screen sizes:
+Smartphones (e.g., iPhone SE, iPhone 8, Samsung Galaxy S5)
+Netbooks (e.g., HP Mini 210, Dell Inspiron Mini)
+Notebooks (e.g., Dell XPS 13, MacBook Air 13-inch)
+Monitors (e.g., Full HD, 4K Ultra HD)
+Reusable Functions
+1. Login and Logout Functions
+Reusable functions for logging in and logging out
+2. Load Time Measurement
+Function to measure the page load time after each test
+Contributing
+Contributions are welcome! Please follow the contribution guidelines.
+
+License
+This project is licensed under the MIT License.
+
+
+
+
+
