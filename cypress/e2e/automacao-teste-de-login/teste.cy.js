@@ -3,13 +3,7 @@
 context('Teste funcional de login', () => {
     beforeEach(() => {
         cy.visit('https://www.saucedemo.com/v1/');
-        cy.window().then((win) => {
-            // Verifica se a interface PerformanceNavigationTiming está disponível
-            if (win.performance && win.performance.timing) {
-                const loadTime = win.performance.timing.loadEventEnd - win.performance.timing.navigationStart;
-                cy.log(`Tempo de carregamento: ${loadTime} ms`);
-            }
-        });
+       
     });
 
     // Teste login sem usuário e senha
@@ -182,8 +176,10 @@ context('Teste funcional de login', () => {
         cy.window().then((win) => {
             if (win.performance && win.performance.timing) {
                 const loadTime = win.performance.timing.loadEventEnd - win.performance.timing.navigationStart;
-                cy.log(`Tempo de carregamento: ${loadTime} ms`);
-            }
+				cy.log(`Tempo de carregamento: ${loadTime} ms`);
+			} else {
+				cy.log('Não foi possível medir o tempo de carregamento.');
+			}
         });
     });
 });
